@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
   padding:0;
 }
 
-body {
+.body {
   background: image_url('concrete-texture.png');
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -36,3 +36,38 @@ body {
   background: linear-gradient(to right, rgba(32,124,229,1) 0%, rgba(73,155,234,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207ce5', endColorstr='#499bea', GradientType=1 );
 }
+
+.apple_pagination {
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default;
+  position: absolute;
+  bottom: 0px;
+  width: 100%; }
+
+.apple_pagination a, .apple_pagination span {
+  padding: 0.2em 0.3em; }
+
+.apple_pagination .disabled {
+  color: #aaaaaa; }
+
+.apple_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background-color: #bebebe;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.5;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+
+.apple_pagination a {
+  text-decoration: none;
+  color: black; }
+  .apple_pagination a:hover, .apple_pagination a:focus {
+    text-decoration: underline; }
