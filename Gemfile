@@ -56,3 +56,5 @@ end
 gem 'will_paginate'
 
 gem 'simple_form'
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
