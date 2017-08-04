@@ -1,7 +1,9 @@
 <br />
 <div class = "container-fluid col-10 offset-1 booyah-box">
-  <h1><%= @place.name %></h1>
-  <i><%= @place.address %></i>
+<h1 id="show-page-header"><%= @place.name %></h1>
+<%= link_to 'Edit', edit_place_path(@place), class: "float-right offset-1 btn btn-secondary" %>
+  <br /><i><%= @place.address %></i>
   <br /><br />
   <p><%= @place.description %> </p>
+  
 </div>

@@ -1,0 +1,13 @@
+<br />
+<div class = "contained-fluid col-10 offset-1 booyah-box">
+<h1>Edit <%= link_to @place.name, place_path %></h1>
+<br />
+  <%= simple_form_for @place do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <br />
+    <%= f.submit 'Edit', class: "btn btn-primary col-12 col-md-5" %>
+  <% end %>
+
+</div>
