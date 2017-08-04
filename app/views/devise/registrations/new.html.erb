@@ -10,7 +10,7 @@
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
   </div>
-  <small>* indicates required field</small>
+  <small class = "required-field-text">* indicates required field</small>
   <div class="form-actions">
   <br />
     <%= f.button :submit, "Sign up", class: 'btn btn-primary col-5' %>
