@@ -1,7 +1,14 @@
 <br />
 <div class = "container-fluid col-10 offset-1 booyah-box">
 <h1 id="show-page-header"><%= @place.name %></h1>
-<%= link_to 'Edit', edit_place_path(@place), class: "float-right offset-1 btn btn-secondary" %>
+  <div class="float-right">
+    <%= link_to edit_place_path(@place), class: 'btn btn-secondary' do %>
+      <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+    <% end %>
+    <%= link_to place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' do %>
+      <i class="fa fa-trash" aria-hidden="true"></i> Delete
+    <% end %>
+  </div>
   <br /><i><%= @place.address %></i>
   <br /><br />
   <p><%= @place.description %> </p>
