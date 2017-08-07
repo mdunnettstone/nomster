@@ -20,6 +20,7 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find(params[:id])
+    @comment = Comment.new
   end
 
   def edit
@@ -31,18 +32,18 @@ class PlacesController < ApplicationController
   end
 
   def update
-  @place = Place.find(params[:id])
+    @place = Place.find(params[:id])
 
-  if @place.user != current_user
-    return render text: 'Not Allowed', status: :forbidden
-  end
+    if @place.user != current_user
+      return render text: 'Not Allowed', status: :forbidden
+    end
 
-  @place.update_attributes(place_params)
-  if @place.valid?
-    redirect_to root_path
-  else
-    render :edit, status: :unprocessable_entity
-  end
+    @place.update_attributes(place_params)
+    if @place.valid?
+      redirect_to root_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
