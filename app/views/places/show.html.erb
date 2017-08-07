@@ -13,6 +13,27 @@
   </div>
   <br /><i><%= @place.address %></i>
   <br /><br />
+  <% if @place.latitude.present? && @place.longitude.present? %>
+    <script>
+      function initMap() {
+        var location = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: location
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOz4QIsVKc1PoR0LojGMbj-9Jsgf0VUzA&callback=initMap">
+    </script>
+    <div id="map"></div>
+  <% end %> 
+  <br />
   <p><%= @place.description %> </p>
-  
+ 
+
 </div>
